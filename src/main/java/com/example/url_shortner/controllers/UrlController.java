@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/url")
 public class UrlController {
 
     private UrlService urlService;
@@ -17,12 +17,13 @@ public class UrlController {
         this.urlService = urlService;
     }
 
-    @GetMapping("/url")
+    @GetMapping("/")
     public String getHello(){
+        System.out.println("Hello World");
         return  "Hello World";
     }
 
-    @PostMapping("/url")
+    @PostMapping("/")
     public ResponseEntity<?> postUrl(@RequestBody GetUrlDTO url) {
         ShortURLResponseDTO response =urlService.generateShortURLService(url.getOriginalUrl());
         if (response == null) {
