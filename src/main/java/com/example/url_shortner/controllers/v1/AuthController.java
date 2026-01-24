@@ -1,4 +1,4 @@
-package com.example.url_shortner.controllers;
+package com.example.url_shortner.controllers.v1;
 
 import com.example.url_shortner.dto.LoginRequestDTO;
 import com.example.url_shortner.dto.LoginResponseDTO;
@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/auth")
 public class AuthController {
-
     private final AuthService authService;
-
     public AuthController(AuthService authService) {
         this.authService = authService;
     }

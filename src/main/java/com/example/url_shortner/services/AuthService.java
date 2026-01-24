@@ -34,7 +34,7 @@ public class AuthService {
 
         String token = jwtService.generateToken(user);
 
-        return new LoginResponseDTO(Objects.requireNonNull(user).getId(),token);
+        return new LoginResponseDTO(Objects.requireNonNull(user).getUuid(),token,user.getEmail());
     }
 
     public SignUpResponseDTO signup(SignUpRequestDTO signUpRequestDTO) {

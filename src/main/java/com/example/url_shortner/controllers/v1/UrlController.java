@@ -1,4 +1,4 @@
-package com.example.url_shortner.controllers;
+package com.example.url_shortner.controllers.v1;
 
 import com.example.url_shortner.dto.GetUrlDTO;
 import com.example.url_shortner.dto.ShortURLResponseDTO;
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/url")
+@RequestMapping("/url")
 public class UrlController {
 
     private UrlService urlService;
@@ -17,10 +17,9 @@ public class UrlController {
         this.urlService = urlService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String getHello(){
-        System.out.println("Hello World");
-        return  "Hello World";
+        return  "Health Check";
     }
 
     @PostMapping("/")
