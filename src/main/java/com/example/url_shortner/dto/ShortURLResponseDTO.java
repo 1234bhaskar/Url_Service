@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ShortURLResponseDTO {
-
+    private String username;
     private String url;
     private String shortURL;
     private String status;
